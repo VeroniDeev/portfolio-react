@@ -1,0 +1,457 @@
+$presentation-about-title: #000;
+$presentation-info: #2a4a9b;
+$presentation-description: #333333;
+$button-background-about: #b2b2b2;
+$button-content-about: #535353;
+$button-background-github: #262626;
+$button-content-github: #fff;
+$about-description: #545454;
+$about-information-important: #0009e7;
+
+.main-page {
+  position: relative;
+  .presentation {
+    width: 620px;
+    position: absolute;
+    top: 211px;
+    left: 80px;
+    .titre-presentation {
+      h1 {
+        font-size: 30px;
+        font-family: "Montserrat";
+        color: $presentation-about-title;
+        .prenom-presentation {
+          color: $presentation-info;
+        }
+      }
+      .prenom-presentation::after {
+        content: "|";
+        color: #000000af;
+        animation-name: animate-bar;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+      }
+    }
+    .description-presentation {
+      h2 {
+        font-family: "Montserrat";
+        font-weight: 500;
+        margin-top: 30px;
+        font-size: 20px;
+        color: $presentation-description;
+      }
+    }
+    .button-presentation {
+      width: 296px;
+      height: 42px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      .about-more {
+        cursor: pointer;
+        // position: relative;
+        background-color: $button-background-about;
+        width: 138px;
+        height: 42px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 14px;
+        text-decoration: none;
+        color: $button-content-about;
+        font-family: "Montserrat";
+        font-weight: 500;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0px 9px 20px 0px #53535391;
+        }
+      }
+      .github {
+        cursor: pointer;
+        position: relative;
+        background-color: $button-background-github;
+        width: 138px;
+        height: 42px;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.91);
+        }
+        img {
+          width: 24px;
+          height: 24px;
+          position: absolute;
+          left: 13px;
+        }
+        p {
+          position: absolute;
+          right: 33px;
+          font-size: 14px;
+          text-decoration: none;
+          color: $button-content-github;
+          font-family: "Montserrat";
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .image-presentation {
+    img {
+      width: 592px;
+      height: 430px;
+      position: absolute;
+      top: 184px;
+      right: 100px;
+    }
+  }
+  .bottom-page {
+    // display: flex;
+    // flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 955px;
+    .bottom-contain {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      h3 {
+        display: flex;
+        justify-content: center;
+        font-size: 24px;
+        font-family: "Montserrat";
+        font-weight: 700;
+      }
+      .img-bottom {
+        position: absolute;
+        top: 115px;
+      }
+      .text-bottom {
+        width: 601px;
+        height: 267px;
+        position: absolute;
+        top: 240px;
+        right: 20px;
+        p {
+          text-align: center;
+          font-size: 18px;
+          color: #545454;
+          font-family: "Montserrat";
+          font-weight: 500;
+          span {
+            color: $about-information-important;
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes animate-bar {
+  from {
+    content: "";
+  }
+  to {
+    content: "|";
+  }
+}
+
+@media (max-width: 740px) {
+  body {
+    overflow-x: hidden;
+  }
+  .main-page {
+    .top-page {
+      .presentation {
+        left: 20px;
+        width: 95%;
+        .titre-presentation {
+          h1 {
+            font-size: 18px;
+          }
+        }
+        .description-presentation {
+          width: 323px;
+          height: 66px;
+          h2 {
+            font-size: 13px;
+          }
+        }
+        .button-presentation {
+          width: 189px;
+          height: 26px;
+          .about-more {
+            width: 87px;
+            height: 26px;
+            font-size: 10px;
+          }
+          .github {
+            width: 87px;
+            height: 26px;
+            font-size: 10px;
+            img {
+              width: 17px;
+              height: 16px;
+              left: 10%;
+            }
+            p {
+              font-size: 10px;
+              // top: 50%;
+              right: 25%;
+            }
+          }
+        }
+      }
+      .image-presentation {
+        img {
+          top: 430px;
+          left: 10%;
+          right: 50%;
+          width: 304px;
+          height: 221px;
+        }
+      }
+    }
+    .bottom-page {
+      .bottom-contain {
+        h3 {
+          font-size: 10px;
+        }
+        .img-bottom {
+          top: 217px;
+          left: 30px;
+          img {
+            // display: none;
+            width: 353px;
+            height: 241px;
+          }
+        }
+        .text-bottom {
+          top: 30px;
+          width: 375px;
+          height: 121px;
+          p {
+            font-size: 9px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 850px) and (min-width: 740px) {
+  body {
+    overflow-x: hidden;
+  }
+  .main-page {
+    .top-page {
+      .presentation {
+        left: 20px;
+        width: 95%;
+        .titre-presentation {
+          h1 {
+            font-size: 25px;
+          }
+        }
+        .description-presentation {
+          width: 90%;
+          height: 66px;
+          h2 {
+            font-size: 20px;
+          }
+        }
+        .button-presentation {
+          width: 189px;
+          height: 26px;
+          .about-more {
+            width: 87px;
+            height: 26px;
+            font-size: 10px;
+          }
+          .github {
+            width: 87px;
+            height: 26px;
+            font-size: 10px;
+            img {
+              width: 17px;
+              height: 16px;
+              left: 10%;
+            }
+            p {
+              font-size: 10px;
+              // top: 50%;
+              right: 25%;
+            }
+          }
+        }
+      }
+      .image-presentation {
+        img {
+          top: 450px;
+          left: 10%;
+          right: 50%;
+          // width: 304px;
+          width: 456px;
+          height: 331px;
+          // height: 221px;
+        }
+      }
+    }
+    .bottom-page {
+      .bottom-contain {
+        h3 {
+          font-size: 15px;
+        }
+        .img-bottom {
+          top: 257px;
+          left: 150px;
+          // width: 500px;
+          // height: 500px;
+          img {
+            // display: none;
+            width: 524px;
+            height: 361px;
+          }
+        }
+        .text-bottom {
+          top: 30px;
+          // width: 375px;
+          width: 85%;
+          height: 121px;
+          p {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 801px) {
+  body {
+    overflow-x: hidden;
+  }
+  .main-page {
+    .top-page {
+      .presentation {
+        left: 20px;
+        width: 95%;
+        .titre-presentation {
+          h1 {
+            font-size: 28px;
+          }
+        }
+        .description-presentation {
+          width: 75%;
+          height: 66px;
+          h2 {
+            font-size: 20px;
+          }
+        }
+        .button-presentation {
+          // width: 189px;
+          // height: 26px;
+          width: 270px;
+          height: 39px;
+          .about-more {
+            width: 130px;
+            height: 39px;
+            font-size: 15px;
+          }
+          .github {
+            width: 130px;
+            height: 39px;
+            font-size: 10px;
+            img {
+              width: 25px;
+              height: 24px;
+              left: 10%;
+            }
+            p {
+              font-size: 15px;
+              // top: 50%;
+              right: 25%;
+            }
+          }
+        }
+      }
+      .image-presentation {
+        img {
+          top: 450px;
+          left: 20%;
+          right: 50%;
+          width: 456px;
+          height: 331px;
+        }
+      }
+    }
+    .bottom-page {
+      .bottom-contain {
+        h3 {
+          font-size: 10px;
+        }
+        .img-bottom {
+          top: 217px;
+          left: 30px;
+          img {
+            // display: none;
+            width: 353px;
+            height: 241px;
+          }
+        }
+        .text-bottom {
+          top: 30px;
+          width: 375px;
+          height: 121px;
+          p {
+            font-size: 9px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px) and (min-width: 1000px) {
+  body {
+    overflow-x: hidden;
+  }
+  .main-page {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .bottom-page {
+      .bottom-contain {
+        h3 {
+          font-size: 20px;
+        }
+        .img-bottom {
+          top: 257px;
+          left: 200px;
+          img {
+            // display: none;
+            width: 606px;
+            height: 482px;
+          }
+        }
+        .text-bottom {
+          top: 30px;
+          width: 90%;
+          height: 121px;
+          p {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}
