@@ -20,9 +20,7 @@ const updatePath = (path) => {
     if (allPath[i] === path) {
       allLink[i].classList.add("active");
     }
-    console.log(allPath[i]);
   }
-  // console.log(allPath[0]);
 };
 
 const Navbar = () => {

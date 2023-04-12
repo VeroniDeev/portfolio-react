@@ -2,9 +2,9 @@ import React, { useEffect, useState, useRef, Component } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import "./main.scss";
 import { Link, useLocation } from "react-router-dom";
-import Github from "../../assets/github-white.svg";
-import ProgramGuy from "../../assets/programming-guy.svg";
-import Chill from "../../assets/chill.svg";
+import Github from "../../assets/Main/github-white.svg";
+import ProgramGuy from "../../assets/Main/programming-guy.svg";
+import Chill from "../../assets/Main/chill.svg";
 
 const value = [
   "je m'appelle Zoubheir",
