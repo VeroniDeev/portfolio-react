@@ -36,36 +36,46 @@ const ContainAll = styled.main`
 `;
 
 const FrameworkDiv = styled.div`
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  gap: 50px;
   justify-content: center;
   margin-bottom: 100px;
 `;
 
 const DatabaseDiv = styled.div`
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  gap: 50px;
   justify-content: center;
   margin-bottom: 100px;
 `;
 
 const ProgrammingDiv = styled.div`
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  gap: 50px;
   justify-content: center;
   margin-bottom: 100px;
+  width: 50%;
 `;
 
 const ToolsDiv = styled.div`
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  gap: 50px;
   justify-content: center;
   margin-bottom: 100px;
 `;
 
 const DisplayCenter = styled.div`
-  width: 40%;
+  width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: space-evenly;
 `;
 
@@ -90,10 +100,7 @@ const Section = styled.section`
 const ImageTop = styled.img`
   width: 389px;
   height: 247px;
-`;
-
-const TitleMain = styled.h2`
-  display: block;
+  display: inline;
 `;
 
 const ContentCompetence = () => {
@@ -107,50 +114,50 @@ const ContentCompetence = () => {
       </Section>
       <Section>
         <TitleContent>Langage de programmation</TitleContent>
-        <ProgrammingDiv>
-          <DisplayCenter>
+        <DisplayCenter>
+          <ProgrammingDiv>
             <ImageCompetence src={cpp} />
             <ImageCompetence src={css} />
             <ImageCompetence src={html} />
             <ImageCompetence src={js} />
             <ImageCompetence src={node} />
             <ImageCompetence src={python} />
-          </DisplayCenter>
-        </ProgrammingDiv>
+          </ProgrammingDiv>
+        </DisplayCenter>
       </Section>
       <Section>
         <TitleContent>Framework</TitleContent>
-        <FrameworkDiv>
-          <DisplayCenter>
+        <DisplayCenter>
+          <FrameworkDiv>
             <ImageCompetence src={django} />
             <ImageCompetence src={express} />
             <ImageCompetence src={qt} />
             <ImageCompetence src={react} />
-          </DisplayCenter>
-        </FrameworkDiv>
+          </FrameworkDiv>
+        </DisplayCenter>
       </Section>
       <Section>
         <TitleContent>Database</TitleContent>
-        <DatabaseDiv>
-          <DisplayCenter>
+        <DisplayCenter>
+          <DatabaseDiv>
             <ImageCompetence src={mongo} />
             <ImageCompetence src={mysql} />
             <ImageCompetence src={sqlite} />
-          </DisplayCenter>
-        </DatabaseDiv>
+          </DatabaseDiv>
+        </DisplayCenter>
       </Section>
       <Section>
         <TitleContent>Outils de production</TitleContent>
-        <ToolsDiv>
-          <DisplayCenter>
+        <DisplayCenter>
+          <ToolsDiv>
             <ImageCompetence src={bash} />
             <ImageCompetence src={docker} />
             <ImageCompetence src={figma} />
             <ImageCompetence src={git} />
             <ImageCompetence src={vscode} />
             <ImageCompetence src={webpack} />
-          </DisplayCenter>
-        </ToolsDiv>
+          </ToolsDiv>
+        </DisplayCenter>
       </Section>
     </ContainAll>
   );

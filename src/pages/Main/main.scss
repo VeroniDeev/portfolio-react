@@ -423,6 +423,15 @@ $about-information-important: #0009e7;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    .image-presentation {
+      img {
+        top: 450px;
+        left: 20%;
+        right: 50%;
+        width: 592px;
+        height: 430px;
+      }
+    }
     .bottom-page {
       .bottom-contain {
         h3 {
