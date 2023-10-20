@@ -24,6 +24,19 @@ import styled from "styled-components";
 const ImageCompetence = styled.img`
   width: 75px;
   height: 75px;
+  @media (max-width: 850px) and (min-width: 740px) {
+    width: 50px;
+    height: 50px;
+  }
+  @media (max-width: 1000px) and (min-width: 801px) {
+    width: 50px;
+    height: 50px;
+  }
+  @media (max-width: 1300px) and (min-width: 1000px) {
+    width: 50px;
+    height: 50px;
+  }
+  
 `;
 
 const ContainAll = styled.main`

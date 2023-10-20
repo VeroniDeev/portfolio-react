@@ -5,8 +5,8 @@ import "./navbar.scss";
 const relPath = {
   accueil: "/",
   competence: "/competence",
-  projet: "/oui",
-  contact: "/contact",
+  // projet: "/oui",
+  // contact: "/contact",
 };
 
 const updatePath = (path) => {
@@ -42,7 +42,7 @@ const Navbar = () => {
               Compétences
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/" className="navlink">
               Projets
             </Link>
@@ -51,7 +51,7 @@ const Navbar = () => {
             <Link to="/" className="navlink">
               Contact
             </Link>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header>

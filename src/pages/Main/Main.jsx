@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, Component } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import "./main.scss";
 import { Link, useLocation } from "react-router-dom";
@@ -77,11 +77,11 @@ const Main = (props) => {
               </h2>
             </div>
             <div className="button-presentation">
-              <Link to="/oui" className="about-more">
+              <Link to="/#bottom-page" className="about-more" >
                 En savoir plus
               </Link>
               <a
-                href="https://github.com/CozmosDeev"
+                href="https://github.com/VeroniDeev"
                 target="_BLANK"
                 className="github"
                 rel="noopener noreferrer"
@@ -95,7 +95,7 @@ const Main = (props) => {
             <img src={ProgramGuy} alt="" />
           </section>
         </div>
-        <div className="bottom-page">
+        <div className="bottom-page" id="bottom-page">
           <div className="bottom-contain">
             <h3>À propos de moi</h3>
             <section className="img-bottom">
